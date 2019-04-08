@@ -55,13 +55,13 @@ const tweets = [
  *       - repliesの内容もforEachを使って全て表示する
  */
 
-tweets.forEach((tweets, index) => {
+tweets.forEach((tweet, index) => {
   console.log('--------ツイート' + index + '--------');
-  console.log('ユーザー名：' + tweets.username);
-  console.log('ツイート：' + tweets.text);
-  tweets.replies.forEach((replies, index) => {
+  console.log('ユーザー名：' + tweet.username);
+  console.log('ツイート：' + tweet.text);
+  tweets.replies.forEach((reply, index) => {
     console.log('--------返信' + index + '--------');
-    console.log('ユーザー名：' + replies.username);
-    console.log('ツイート' + replies.text);
+    console.log('ユーザー名：' + reply.username);
+    console.log('ツイート：' + reply.text);
   });
 });
