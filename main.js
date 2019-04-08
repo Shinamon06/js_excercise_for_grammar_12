@@ -15,6 +15,36 @@
  *         - text : ツイート内容(文字列。ツイート内容は自由に作って良い。)
  */
 
+const tweets = [
+  {
+    username: 'しなもん',
+    text: 'パワーリフティングの大会まで2週間切りましたね！',
+    replies: [
+      {
+        username: 'ポン太くん',
+        text: '怪我しないように練習しましょう！',
+      },
+      {
+        username: 'おっくん',
+        text: '自分の階級、人数多すぎですね><',
+      }
+    ]
+  },
+  {
+    username: 'おっくん',
+    text: 'ギア類、新調しました？',
+    replies: [
+      {
+        username: 'ポン太くん',
+        text: 'ベンチのみなのでしてないですー！'
+      },
+      {
+        username: 'しなもん',
+        text: 'リストラップを鬼に変えました^^'
+      }
+    ]
+  }
+];
 
 /**
  * 課題2: 課題1で作ったtweetsの内容を全て表示する
@@ -24,3 +54,14 @@
  *     - replies
  *       - repliesの内容もforEachを使って全て表示する
  */
+
+tweets.forEach((tweet, index) => {
+  console.log('--------ツイート' + index + '--------');
+  console.log('ユーザー名：' + tweet.username);
+  console.log('ツイート：' + tweet.text);
+  tweets.replies.forEach((reply, index) => {
+    console.log('--------返信' + index + '--------');
+    console.log('ユーザー名：' + reply.username);
+    console.log('ツイート：' + reply.text);
+  });
+});
